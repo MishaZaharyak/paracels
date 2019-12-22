@@ -1,0 +1,53 @@
+@import "./vars.scss";
+
+@mixin amination($name, $sec) {
+  -webkit-animation-name: $name;
+  animation-name: $name;
+  -webkit-animation-duration: $sec;
+  animation-duration: $sec;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@mixin animated($sec) {
+  -webkit-animation-duration: $sec;
+  animation-duration: $sec;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@mixin maxQ($width...) {
+  @if length($width) == 1 {
+    @media (max-width: nth($width, 1)) {
+      @content;
+    }
+  } @else if length($width) == 2 {
+    @media (min-width: nth($width, 1)) and (max-width: nth($width, 2)) {
+      @content;
+    }
+  }
+}
+
+@mixin minQ($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin button($bg, $color, $padding) {
+  background-color: $bg;
+  padding: $padding 20px;
+  color: $color;
+  font-size: 15px;
+  line-height: 1;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  border-radius: 20px;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+    background-color: $dark_red;
+  }
+}
+
