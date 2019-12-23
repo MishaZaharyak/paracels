@@ -95,6 +95,10 @@ li.checked {
 .header {
   position: absolute;
   width: 100%;
+
+  @include maxQ(1199px) {
+    display: none;
+  }
 }
 
 .top-bar {
@@ -262,6 +266,21 @@ li.checked {
     display: flex;
     align-items: center;
   }
+
+  @include maxQ(575px) {
+    .inner__text-con {
+      text-align: center;
+    }
+
+    .item__inner {
+      justify-content: center;
+    }
+
+    .button {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .main-slider__h1 {
@@ -308,15 +327,13 @@ li.checked {
     background-image: url("../images/section_image_4.png");
   }
 
-  .certificates {
-    img {
-      max-width: 115px;
-      max-height: 170px;
-      margin: 0 5px;
+  .certificates img {
+    max-width: 115px;
+    max-height: 170px;
+    margin: 0 5px;
 
-      &:first-child {
-        margin-left: 0;
-      }
+    &:first-child {
+      margin-left: 0;
     }
   }
 
@@ -343,6 +360,8 @@ li.checked {
     background-image: url("../images/section_image_mb_1.png");
     background-size: 80%;
     background-position: center;
+    padding-left: 15px;
+    padding-right: 15px;
 
     .text_block {
       margin: auto;
@@ -353,7 +372,7 @@ li.checked {
       margin-left: auto;
     }
 
-    .section-image{
+    .section-image {
       display: block;
       max-width: 320px;
       width: 100%;
@@ -362,6 +381,15 @@ li.checked {
 
     &.block-2 {
       background-image: none;
+    }
+
+    .certificates {
+      justify-content: center;
+
+      img, img:first-child {
+        margin: 0 5px;
+        max-width: 90px;
+      }
     }
   }
 }
@@ -428,6 +456,15 @@ li.checked {
       margin-right: auto;
     }
   }
+
+  @include maxQ(575px) {
+    min-width: unset;
+    max-width: 320px;
+    padding: 0 15px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .doctors-section-inner {
@@ -468,6 +505,10 @@ li.checked {
     background-size: 100% 76%;
     .arrows {
       display: none;
+    }
+
+    .section-header {
+      padding: 0 15px;
     }
   }
 }
@@ -536,6 +577,14 @@ li.checked {
       max-width: 220px;
       width: 100%;
     }
+  }
+
+  @include maxQ(767px) {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  @include maxQ(575px) {
+    max-width: 320px;
   }
 }
 
@@ -646,6 +695,10 @@ li.checked {
     p {
       color: black;
     }
+
+    .content {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -700,6 +753,7 @@ li.checked {
   }
 
   @include maxQ(767px) {
+    padding: 0 15px;
     .item__inner {
       p {
         text-align: center !important;
@@ -849,7 +903,7 @@ li.checked {
     }
 
     .top-bar__item {
-      margin-bottom: 25px;
+      margin: 0 20px 25px !important;
     }
   }
 }
@@ -858,7 +912,7 @@ li.checked {
   background: rgb(97, 2, 39);
   background: linear-gradient(180deg, rgba(97, 2, 39, 1) 0%, rgba(141, 0, 38, 1) 100%);
   color: white;
-  height: 40px;
+  min-height: 40px;
 
   > div {
     height: 100%;

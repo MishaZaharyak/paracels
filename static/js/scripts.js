@@ -30,6 +30,13 @@ new WOW({
                         slidesToShow: 2,
                         asNavFor: null,
                     }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        asNavFor: null,
+                    }
                 }
             ]
         });
