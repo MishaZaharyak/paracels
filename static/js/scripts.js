@@ -5,6 +5,31 @@ new WOW({
 
 
 (function ($) {
+//    main slider
+    var mainSlider = $('.main-slider');
+
+    if (mainSlider.length) {
+        $(mainSlider).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 500,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+            cssEase: "cubic-bezier(0,.24,1,.66)",
+            arrows: false,
+            appendDots: mainSlider.parent().find('.slider-dots .container'),
+            dots: true,
+            dotsClass: 'custom-dots',
+            customPaging: function (slider, i) {
+                var slideNumber = (i + 1);
+                var totalSlides = slider.slideCount;
+                return '<a class="dot" role="button" title="' + slideNumber + ' of ' + totalSlides + '"><span class="number">' + slideNumber + '</span></a>';
+            }
+        });
+    }
+//    end main slider
+
 // doctors slider
     var doctorsSlider = $(".doctors-slider");
     var doctorsSliderNav = $(".doctors-slider-nav");
@@ -50,11 +75,9 @@ new WOW({
             prevArrow: doctorsSliderNav.closest('.doctors-section-inner').find(".slick_prev")
         });
 
-        var windowWidth = window.innerWidth;
-
-        if (windowWidth < 992) {
-            doctorsSliderNav.slick('unslick');
-        }
+        $(window).on('orientationchange', function () {
+            doctorsSliderNav.get(0).slick.refresh();
+        });
     }
 // end doctors slider
 
@@ -129,7 +152,6 @@ new WOW({
     }
 // end medical center slider
 })(jQuery);
-
 // map
 (function ($) {
     var map, icon, main_marker;
@@ -179,3 +201,45 @@ $('a[href^="#"]').on('click', function (e) {
     var top = $(this.hash).offset().top;
     $('body, html').animate({scrollTop: top}, 1500);
 });
+
+// menu
+function fixedMenu() {
+    var menu = $('.menu-navbar');
+    var height = $('.header').outerHeight();
+
+    if (window.scrollY > height) {
+        menu.addClass('fixed-menu');
+
+    } else {
+         menu.removeClass('fixed-menu');
+    }
+}
+
+$(document).ready(function () {
+    fixedMenu();
+});
+
+$(window)
+    .scroll(function () {
+        fixedMenu();
+    })
+    .resize(function () {
+        fixedMenu();
+    });
+// end menu
+
+// menu humburger button amination handler
+$("#nav-icon3").on("click", function (e) {
+    var button = $(this);
+    // button.toggleClass("open");
+    var target = $(button.data("target"));
+
+    if (!target.hasClass("show")) {
+        button.addClass("open");
+        button.closest(".menu-navbar").addClass("opened-menu");
+    } else {
+        button.removeClass("open");
+        button.closest(".menu-navbar").removeClass("opened-menu");
+    }
+});
+// end menu humburger button amination handler
