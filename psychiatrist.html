@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link
+            rel="stylesheet"
+            href="./static/vendor/bootstrap4.1.3/bootstrap-reboot.min.css"
+    />
+    <!--    <link rel="stylesheet" href="./static/fonts/stylesheet.css"/>-->
+    <link
+            rel="stylesheet"
+            href="./static/vendor/bootstrap4.1.3/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./static/vendor/slick/slick.css">
+    <link rel="stylesheet" href="./static/vendor/animate-css/animate.css"/>
+    <link rel="stylesheet" href="./static/css/style.css"/>
+</head>
+<body>
+<div class="blur">
+    <header class="header">
+        <div class="container">
+            <div class="top-bar">
+                <div class="top-bar__item">
+                    <table class="table table-borderless mb-0 top-bar__table">
+                        <tbody>
+                        <tr>
+                            <td class="text-right pr-1 font-weight-bold">Пн-Пт</td>
+                            <td class="text-left">— 8:30 до 19:00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right pr-1 font-weight-bold">Сб</td>
+                            <td class="text-left">— 9:00 до 15:00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right pr-1 font-weight-bold">Нд</td>
+                            <td class="text-left">— Вихідний</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-bar__item">
+                    <span>вул. Грушевського, 52</span>
+                    <a class="a-link font-weight-bold"
+                       href="javascript:location='mailto:\u0064\u0072\u002e\u0070\u0061\u0072\u0061\u0063\u0065\u006c\u0073\u0073\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0">
+                        <script type="text/javascript">document.write('\u0064\u0072\u002e\u0070\u0061\u0072\u0061\u0063\u0065\u006c\u0073\u0073\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script>
+                    </a>
+                </div>
+                <div class="top-bar__item top-bar__logo-cont">
+                    <div class="">
+                        <img src="./static/images/logo.png" alt="парацельс" class="top-bar__logo-img">
+                    </div>
+                </div>
+                <div class="top-bar__item">
+                    <a class="a-link" href="tel:+380984488004">+38 098 44 88 004</a>
+                    <a class="a-link" href="tel:+380730101401">+38 073 01 01 401</a>
+                </div>
+                <div class="top-bar__item top-bar__button-cont">
+                    <button class="btn order-btn">Замовити дзвінок</button>
+                </div>
+            </div>
+            <nav class="menu-navbar navbar navbar-expand-lg navbar-light bg-light">
+                <div class="menu-backdrop"></div>
+                <div class="container">
+                    <button id="nav-icon3" type="button"
+                            class="ml-auto"
+                            data-toggle="collapse" data-target="#navbarMenu"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarMenu">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item active">
+                                <a class="a-link nav-item__link" href="#">Головна</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-link nav-item__link" href="#">УЗД</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-link nav-item__link" href="#">приватний психіатор</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-link nav-item__link" href="#">наші лікарі</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-link nav-item__link" href="#">про нас</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="a-link nav-item__link" href="#">контакти</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div id="main-slider" class="main-slider-section">
+        <div class="slider-dots centered">
+            <div class="position-relative container"></div>
+        </div>
+        <div class="main-slider">
+            <div class="item" style="background-image: url('./static/images/slider_image_2.png')">
+                <div class="item__inner container centered">
+                    <div class="inner__text-con">
+                        <p class="p-text">Професійне обстеження</p>
+                        <h1 class="main-slider__h1">приватний психіатор </h1>
+                        <div><img class="mx-auto mt-5" src="./static/images/icons/mscroll.png" alt="scroll down"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('./static/images/slider-image.png')">
+                <div class="item__inner container centered">
+                    <div class="inner__text-con">
+                        <p class="p-text">Професійне обстеження</p>
+                        <h1 class="main-slider__h1">приватний психіатор </h1>
+                        <div><img class="mx-auto mt-5" src="./static/images/icons/mscroll.png" alt="scroll down"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-image-section container section-image-1-2">
+        <div class="text_block">
+            <h3 class="h3">Проводимо УЗД</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, inventore aut accusantium nam
+                aspernatur
+                aperiam quo culpa nesciunt vero excepturi cupiditate optio doloribus, harum fugiat reprehenderit
+                quibusdam distinctio nostrum totam molestiae dolores consequuntur, magnam, maiores alias autem. </p>
+            <ul class="list-unstyled">
+                <li class="checked">Судин та серця</li>
+                <li class="checked">Органів черевної порожнини</li>
+                <li class="checked">Щитоподіної залози</li>
+                <li class="checked">Органів малого тазу</li>
+                <li class="checked">Суглобів</li>
+            </ul>
+            <button class="button mt-3">детальніше та ціни</button>
+        </div>
+    </div>
+    <div class="separator-section section-image-5">
+        <div class="container">
+            <div class="content">
+                <div class="price-old">500 грн</div>
+                <div class="price-new">250 грн</div>
+                <div class="title">Первинний прийом</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus maiores provident
+                    quaerat rerum totam ut veniam voluptates. Ex exercitationem facilis natus repellendus, tempore
+                    unde.</p>
+                <button>Записатися</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews-section">
+        <h3 class="h3 text-center">відгуки</h3>
+        <div class="arrows text-center">
+            <button class="slick_prev">
+                <img src="./static/images/icons/left-arrow.png" alt="left arrow"/>
+            </button>
+            <button class="slick_next">
+                <img src="./static/images/icons/right-arrow.png" alt="right arrow"/>
+            </button>
+        </div>
+        <div class="review-slider">
+            <div class="item">
+                <div class="item__inner">
+                    <img class="starts m-auto" src="./static/images/icons/stars_5.png" alt="5 starts">
+                    <p class="comment-title text-center">Коментар:</p>
+                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut,
+                        blanditiis consectetur consequuntur, doloremque error facilis fugit ipsa magnam maxime natus
+                        nostrum odit perspiciatis, quae.</p>
+                    <div class="author d-flex justify-content-center align-items-center">
+                        <img class="avatar mr-3" src="./static/images/icons/avatar.png" alt="avatar">
+                        <span class="name">Наталя</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__inner">
+                    <img class="starts m-auto" src="./static/images/icons/stars_4.png" alt="5 starts">
+                    <p class="comment-title text-center">Коментар:</p>
+                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut,
+                        blanditiis consectetur consequuntur, doloremque error facilis fugit ipsa magnam maxime natus
+                        nostrum odit perspiciatis, quae.</p>
+                    <div class="author d-flex justify-content-center align-items-center">
+                        <img class="avatar mr-3" src="./static/images/icons/avatar.png" alt="avatar">
+                        <span class="name">Наталя</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__inner">
+                    <img class="starts m-auto" src="./static/images/icons/stars_4.png" alt="5 starts">
+                    <p class="comment-title text-center">Коментар:</p>
+                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut,
+                        blanditiis consectetur consequuntur, doloremque error facilis fugit ipsa magnam maxime natus
+                        nostrum odit perspiciatis, quae.</p>
+                    <div class="author d-flex justify-content-center align-items-center">
+                        <img class="avatar mr-3" src="./static/images/icons/avatar.png" alt="avatar">
+                        <span class="name">Наталя</span>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item__inner">
+                    <img class="starts m-auto" src="./static/images/icons/stars_5.png" alt="5 starts">
+                    <p class="comment-title text-center">Коментар:</p>
+                    <p class="text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aut,
+                        blanditiis consectetur consequuntur, doloremque error facilis fugit ipsa magnam maxime natus
+                        nostrum odit perspiciatis, quae.</p>
+                    <div class="author d-flex justify-content-center align-items-center">
+                        <img class="avatar mr-3" src="./static/images/icons/avatar.png" alt="avatar">
+                        <span class="name">Наталя</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="map_container">
+        <div id="map" class="google_map"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="text-center">
+            <a href="#main-slider" class="to-top">
+                <img src="./static/images/to_top.png" alt="back to top">
+            </a>
+        </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <ul class="navbar-nav m-auto text-center">
+                    <li class="nav-item active">
+                        <a class="a-link nav-item__link" href="#">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a-link nav-item__link" href="#">УЗД</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a-link nav-item__link" href="#">приватний психіатор</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a-link nav-item__link" href="#">наші лікарі</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a-link nav-item__link" href="#">про нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="a-link nav-item__link" href="#">контакти</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="top-bar d-flex">
+                <div class="top-bar__item">
+                    <table class="table table-borderless mb-0 top-bar__table">
+                        <tbody>
+                        <tr>
+                            <td class="text-right pr-1 font-weight-bold">Пн-Пт</td>
+                            <td class="text-left">— 8:30 до 19:00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right pr-1 font-weight-bold">Сб</td>
+                            <td class="text-left">— 9:00 до 15:00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-right pr-1 font-weight-bold">Нд</td>
+                            <td class="text-left">— Вихідний</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-bar__item">
+                    <span>вул. Грушевського, 52</span>
+                    <a class="a-link font-weight-bold"
+                       href="javascript:location='mailto:\u0064\u0072\u002e\u0070\u0061\u0072\u0061\u0063\u0065\u006c\u0073\u0073\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0">
+                        <script type="text/javascript">document.write('\u0064\u0072\u002e\u0070\u0061\u0072\u0061\u0063\u0065\u006c\u0073\u0073\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d')</script>
+                    </a>
+                </div>
+                <div class="top-bar__item parent_logo_cont">
+                    <div class="top-bar__logo-cont">
+                        <img src="./static/images/logo_footer.png" alt="парацельс" class="top-bar__logo-img">
+                    </div>
+                </div>
+                <div class="top-bar__item">
+                    <a class="a-link" href="tel:+380984488004">+38 098 44 88 004</a>
+                    <a class="a-link" href="tel:+380730101401">+38 073 01 01 401</a>
+                </div>
+                <div class="top-bar__item">
+                    <button class="btn order-btn">Замовити дзвінок</button>
+                </div>
+            </div>
+            <div class="footer-logo">
+                <img src="./static/images/logo_footer.png" alt="парацельс">
+            </div>
+        </div>
+        <div class="copyright d-flex align-items-center">
+            <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <span class="mt-3 mb-2 my-md-0">Усі права захищенно 2019 ©</span>
+                <span class="mb-3 mb-md-0">Design by <a class="a-link" target="_blank" href="https://nektaryn.com/">NEKTARYN</a></span>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script src="./static/vendor/jquery/jquery-3.4.1.min.js"></script>
+<script src="./static/vendor/jquery/popper.min.js"></script>
+<script src="./static/vendor/slick/slick.min.js"></script>
+<script src="./static/vendor/bootstrap4.1.3/bootstrap.min.js"></script>
+<script src="./static/vendor/animate-css/wow.min.js"></script>
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyB4FatB7NG6A-oGvDO0ZEbT8fLzsDCFjCM"></script>
+<script src="./static/vendor/gmapjs/gmaps.min.js"></script>
+<script src="./static/js/scripts.js"></script>
+</body>
+</html>

@@ -242,4 +242,15 @@ $("#nav-icon3").on("click", function (e) {
         button.closest(".menu-navbar").removeClass("opened-menu");
     }
 });
+
+$('.menu-backdrop').on('click', function () {
+
+    var menu = $(this).closest('.menu-navbar');
+
+    if (menu.hasClass('opened-menu')) {
+        menu.removeClass("opened-menu");
+        menu.find('#nav-icon3').removeClass('open');
+        $(menu.find('#nav-icon3').data('target')).removeClass('show');
+    }
+});
 // end menu humburger button amination handler
