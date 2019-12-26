@@ -44,22 +44,34 @@ body {
   display: block;
 }
 
-.h3 {
-  @include font-size(35px);
+.h3, .h4, .h5 {
   text-transform: uppercase;
   color: $primary_light;
   line-height: 1;
   font-weight: 900;
+}
+
+.h3 {
+  @include font-size(35px);
 
   @include maxQ(991px) {
     text-align: center;
   }
 }
 
+.h4 {
+  @include font-size(25px);
+}
+
+.h5 {
+  @include font-size(20px);
+}
+
 li.checked {
   padding-left: 30px;
   position: relative;
   margin-bottom: 12px;
+  font-size: 14px;
 
   &::before {
     position: absolute;
@@ -584,7 +596,7 @@ li.checked {
 
 .form-cont {
   margin-left: 40px;
-  margin-right: 30px;
+  margin-right: 50px;
 
   p {
     max-width: 278px;
@@ -597,6 +609,10 @@ li.checked {
     padding: 15px 0 5px 0;
     background-color: transparent;
     width: 100%;
+
+    &:focus {
+      outline: none;
+    }
 
     &::-webkit-input-placeholder { /* Edge */
       color: $primary_light;
@@ -613,8 +629,7 @@ li.checked {
 
   @include maxQ(1199px) {
     order: 1;
-    margin-top: 65px;
-    margin-bottom: 50px;
+    margin: 65px 0 50px;
     min-width: 350px;
 
     .h3, p {
@@ -1105,3 +1120,163 @@ li.checked {
 }
 
 //end footer
+
+// ################# psychiatrist page #################
+.certificates {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .h3 {
+    margin-bottom: 30px;
+  }
+
+  img {
+    max-width: 152px;
+    width: auto;
+    margin: 25px 20px 0;
+  }
+}
+
+.text-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .h3 {
+    max-width: 420px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $primary_light;
+    margin-bottom: 30px;
+    font-size: 14px;
+    max-width: 755px;
+  }
+
+  @include maxQ(991px) {
+    text-align: center;
+    .h3, p, .button {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.section-image-7 {
+  @include minQ(768px) {
+    background-image: url("../images/section_image_7.png");
+  }
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: top right;
+
+  @include maxQ(991px) {
+    background-size: 100%;
+    background-position: 50% 2%;
+  }
+}
+
+.price-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .h3 {
+    margin-bottom: 30px;
+  }
+
+  .table {
+    color: $primary_light;
+    margin-bottom: 0;
+  }
+
+  .thead {
+    background-color: $light_pink;
+  }
+
+  th, .price {
+    font-weight: bold;
+  }
+
+  th, td {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  th {
+    text-transform: uppercase;
+  }
+}
+
+.double-text-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  align-items: center;
+
+  .section:first-child {
+    padding-right: 100px;
+  }
+
+  .h4, .h5, p {
+    margin-bottom: 30px;
+  }
+
+  .h4 {
+    max-width: 710px;
+  }
+
+  .h5 {
+    max-width: 360px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  p {
+    max-width: 530px;
+    color: $primary_light;
+    font-size: 14px;
+  }
+
+  @include maxQ(1199px) {
+    .section:first-child {
+      padding-right: 70px;
+    }
+  }
+
+  @include maxQ(991px) {
+    flex-direction: column;
+
+    &.left {
+      .section:first-child {
+        order: 1;
+        margin-bottom: 0;
+        margin-top: 30px;
+      }
+    }
+
+    .h4, .h5, p, .button {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    ul {
+      padding-left: 0;
+    }
+
+    .section:first-child {
+      padding-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.section-image-8 {
+  background-image: url("../images/section_image_8.png");
+  background-repeat: no-repeat;
+  background-size: 100% 65%;
+  background-position: bottom;
+}
+
+// ################# end psychiatrist page #################
