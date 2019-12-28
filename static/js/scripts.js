@@ -254,3 +254,25 @@ $('.menu-backdrop').on('click', function () {
     }
 });
 // end menu humburger button amination handler
+
+// form
+$("form").submit(function(e) {
+    e.preventDefault();
+    var o = $(this);
+    var phone = $(o).find('input[name=phone]').val();
+    if(!phone.match(/^[\+]?([0-9]{12})$/)) {
+        $(o).find('.alert').removeClass('alert-primary d-none').addClass('alert-danger').fadeIn().html('Формат номеру повинен бути +380*********');
+        return;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "mail.php",
+        data: o.serialize()
+    }).done(function () {
+        $(o).find('.alert').addClass('alert-primary').removeClass('alert-danger d-none').fadeIn().html('Ваше замовлення передане адміністратору');
+        setTimeout(function() {
+            $(o).find('.alert').addClass('d-none').fadeOut().html('')
+        }, 10000)
+    })
+});

@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Document</title>
+    <title>Узд</title>
     <link
             rel="stylesheet"
             href="./static/vendor/bootstrap4.1.3/bootstrap-reboot.min.css"
@@ -17,6 +17,24 @@
     <link rel="stylesheet" href="./static/vendor/slick/slick.css">
     <link rel="stylesheet" href="./static/vendor/animate-css/animate.css"/>
     <link rel="stylesheet" href="./static/css/style.css"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="static/images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="static/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="static/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="static/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="static/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="static/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="static/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="static/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="static/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
+    <link rel="favicon" type="icon" sizes="16x16" href="static/images/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="static/images/favicon//ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
 <div class="blur">
@@ -75,24 +93,24 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarMenu">
-                        <ul class="navbar-nav m-auto">
-                            <li class="nav-item active">
+                        <ul class="navbar-nav m-auto text-center">
+                            <li class="nav-item">
                                 <a class="a-link nav-item__link" href="#">Головна</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="#">УЗД</a>
+                                <a class="a-link nav-item__link" href="/uzd.html">УЗД</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="#">приватний психіатор</a>
+                                <a class="a-link nav-item__link" href="/psychiatrist.html">приватний психіатор</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="#">наші лікарі</a>
+                                <a class="a-link nav-item__link" href="/#doctors">наші лікарі</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="#">про нас</a>
+                                <a class="a-link nav-item__link" href="/#medical-center">про нас</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="#">контакти</a>
+                                <a class="a-link nav-item__link" href="/#map">контакти</a>
                             </li>
                         </ul>
                     </div>
@@ -263,9 +281,10 @@
                     <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, Lorem ipsum dolor sit
                         amet, consectetur
                         adipisicing elit. Eos, </p>
-                    <form action="" class="d-flex flex-column align-items-start">
-                        <input type="text" placeholder="Ваше ім’я">
-                        <input type="text" placeholder="Ваш номер телефону">
+                    <form action="mail.php" class="d-flex flex-column align-items-start" method="POST">
+                        <input type="text" placeholder="Ваше ім’я" required>
+                        <input type="text" placeholder="Ваш номер телефону" required>
+                        <div class="alert alert-primary w-100 mt-2 d-none"></div>
                         <input class="button mt-4" type="submit" value="Записатись на УЗД">
                     </form>
                 </div>
