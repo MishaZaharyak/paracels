@@ -1244,4 +1244,8 @@ li.checked::before {
   background-position: bottom;
 }
 
+.alert {
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=style.css.map */
