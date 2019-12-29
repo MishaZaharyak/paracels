@@ -10,13 +10,23 @@ body {
     width: 8px;
   }
 
-
   &::-webkit-scrollbar-track {
     background-color: transparent;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: $primary_light;
+  }
+}
+
+.scrollDown {
+  @include amination(fadeOutDown, 2.5s);
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+
+  &:hover {
+    animation: none;
   }
 }
 
@@ -31,12 +41,12 @@ body {
 
   &:hover {
     text-decoration: none;
-    color: $primary_light;
+    color: $link_hover_1;
   }
 }
 
 .order-btn {
-  @include button($primary_dark, white, 7px)
+  @include button($primary_dark, white, 7px);
 }
 
 .button {
@@ -44,7 +54,9 @@ body {
   display: block;
 }
 
-.h3, .h4, .h5 {
+.h3,
+.h4,
+.h5 {
   text-transform: uppercase;
   color: $primary_light;
   line-height: 1;
@@ -79,7 +91,7 @@ li.checked {
     width: 20px;
     left: 0;
     background-image: url("../images/icons/tick.png");
-    content: '';
+    content: "";
     background-repeat: no-repeat;
     background-position: 0 50%;
   }
@@ -91,6 +103,18 @@ li.checked {
     border: none;
     outline: none;
     cursor: pointer;
+    border-radius: 50%;
+    padding: 3px 5px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: $medium_pink;
+    }
+  }
+
+  img {
+    margin-bottom: 4px;
   }
 
   .slick_prev {
@@ -174,7 +198,7 @@ li.checked {
   left: 0;
   background: transparent;
   margin-top: 10px;
-  transition: all .3s ease, margin-top 0s ease;
+  transition: all 0.3s ease, margin-top 0s ease;
 
   @include maxQ(1199px) {
     margin-top: 20px;
@@ -198,6 +222,7 @@ li.checked {
 
       .navbar-nav {
         text-align: center;
+        height: auto;
       }
 
       .nav-item {
@@ -218,13 +243,22 @@ li.checked {
         background: transparent;
       }
     }
+
+    .navbar-nav {
+      height: 0;
+    }
   }
 
-  &.opened-menu, &.fixed-menu {
-    background-color: rgba(141, 0, 38, .5) !important;
+  &.opened-menu,
+  &.fixed-menu {
+    background-color: rgba(141, 0, 38, 0.5) !important;
+
+    .nav-item.active,
+    .nav-item:hover {
+      @include menu_active_class_style(white);
+    }
 
     .nav-item__link {
-      border-color: white;
       color: white;
     }
 
@@ -240,7 +274,6 @@ li.checked {
     top: 0;
   }
 
-
   @include minQ(992px) {
     .collapse {
       display: flex !important;
@@ -254,16 +287,22 @@ li.checked {
 
 .nav-item {
   margin: 0 20px;
+
+  &.active,
+  &:hover {
+    @include menu_active_class_style($primary_light);
+  }
 }
 
 .nav-item__link {
   text-transform: uppercase;
-  border-bottom: 1px solid $primary_light;
+  //border-bottom: 1px solid $primary_light;
+  opacity: 0.7;
   padding-right: 0;
   padding-left: 0;
   color: $primary_light;
   font-weight: bold;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 
 #nav-icon3 {
@@ -334,7 +373,6 @@ li.checked {
     display: none;
   }
 }
-
 
 // slider
 .main-slider-section {
@@ -437,13 +475,13 @@ li.checked {
     opacity: 0.5;
     display: flex;
     cursor: pointer;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     .number {
       transform: scale(1);
       font-size: 13px;
       line-height: 1;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
   }
 
@@ -524,7 +562,8 @@ li.checked {
     margin-left: auto;
   }
 
-  p, li {
+  p,
+  li {
     font-size: 14px;
   }
 
@@ -568,7 +607,8 @@ li.checked {
     .certificates {
       justify-content: center;
 
-      img, img:first-child {
+      img,
+      img:first-child {
         margin: 0 5px;
         max-width: 90px;
       }
@@ -603,7 +643,7 @@ li.checked {
     font-size: 14px;
   }
 
-  input[type=text] {
+  input[type="text"] {
     border: none;
     border-bottom: 2px solid $primary_light;
     padding: 15px 0 5px 0;
@@ -614,11 +654,13 @@ li.checked {
       outline: none;
     }
 
-    &::-webkit-input-placeholder { /* Edge */
+    &::-webkit-input-placeholder {
+      /* Edge */
       color: $primary_light;
     }
 
-    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
       color: $primary_light;
     }
 
@@ -632,11 +674,12 @@ li.checked {
     margin: 65px 0 50px;
     min-width: 350px;
 
-    .h3, p {
+    .h3,
+    p {
       display: none;
     }
 
-    input[type=submit] {
+    input[type="submit"] {
       margin-left: auto;
       margin-right: auto;
     }
@@ -658,7 +701,6 @@ li.checked {
   background-size: contain;
   background-position: right 7%;
   position: relative;
-
 
   .section-header {
     @include minQ(1200px) {
@@ -715,8 +757,8 @@ li.checked {
   max-width: 320px;
 
   .item {
-    transition: all .5s cubic-bezier(0.7, 0, 0.3, 1) !important;
-    transition-delay: .3s !important;
+    transition: all 0.5s cubic-bezier(0.7, 0, 0.3, 1) !important;
+    transition-delay: 0.3s !important;
     transform: scale(0.85);
 
     &.slick-active {
@@ -741,7 +783,8 @@ li.checked {
     color: $primary_light;
   }
 
-  .position, .experience {
+  .position,
+  .experience {
     color: $primary_dark;
     font-size: 14px;
   }
@@ -839,7 +882,12 @@ li.checked {
 
   .price-new {
     background: rgb(219, 30, 52);
-    background: linear-gradient(157deg, rgba(219, 30, 52, 1) 23%, rgba(207, 3, 27, 1) 50%, rgba(255, 97, 97, 1) 71%);
+    background: linear-gradient(
+      157deg,
+      rgba(219, 30, 52, 1) 23%,
+      rgba(207, 3, 27, 1) 50%,
+      rgba(255, 97, 97, 1) 71%
+    );
     @include font-size(60px);
     line-height: 1;
     -webkit-background-clip: text;
@@ -860,7 +908,15 @@ li.checked {
   button {
     @include button(transparent, white, 12px);
     background: rgb(219, 29, 51);
-    background: linear-gradient(157deg, rgba(219, 29, 51, 1) 0%, rgba(165, 7, 27, 1) 100%);
+    background: linear-gradient(
+      157deg,
+      rgba(219, 29, 51, 1) 0%,
+      rgba(165, 7, 27, 1) 100%
+    );
+
+    &:hover {
+      background: $primary_light;
+    }
   }
 
   @include maxQ(1400px) {
@@ -941,7 +997,8 @@ li.checked {
     margin: auto;
   }
 
-  .comment-title, .name {
+  .comment-title,
+  .name {
     color: $primary_light;
     font-weight: bold;
   }
@@ -992,18 +1049,18 @@ li.checked {
 
 .medical-center-slider {
   .item {
-    transform: scale(.8);
+    transform: scale(0.8);
     transition: transform 0.5s ease;
     transition-delay: 0.5s;
     transform-origin: bottom;
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       z-index: 10;
       background-color: $primary_dark;
-      opacity: .5;
+      opacity: 0.5;
       width: 100%;
       height: 100%;
       top: 0;
@@ -1110,7 +1167,11 @@ li.checked {
 
 .copyright {
   background: rgb(97, 2, 39);
-  background: linear-gradient(180deg, rgba(97, 2, 39, 1) 0%, rgba(141, 0, 38, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(97, 2, 39, 1) 0%,
+    rgba(141, 0, 38, 1) 100%
+  );
   color: white;
   min-height: 40px;
 
@@ -1155,7 +1216,9 @@ li.checked {
 
   @include maxQ(991px) {
     text-align: center;
-    .h3, p, .button {
+    .h3,
+    p,
+    .button {
       margin-left: auto;
       margin-right: auto;
     }
@@ -1193,11 +1256,13 @@ li.checked {
     background-color: $light_pink;
   }
 
-  th, .price {
+  th,
+  .price {
     font-weight: bold;
   }
 
-  th, td {
+  th,
+  td {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1216,7 +1281,9 @@ li.checked {
     padding-right: 100px;
   }
 
-  .h4, .h5, p {
+  .h4,
+  .h5,
+  p {
     margin-bottom: 30px;
   }
 
@@ -1255,7 +1322,10 @@ li.checked {
       }
     }
 
-    .h4, .h5, p, .button {
+    .h4,
+    .h5,
+    p,
+    .button {
       text-align: center;
       margin-left: auto;
       margin-right: auto;
@@ -1283,4 +1353,118 @@ li.checked {
 
 .alert {
   font-size: 14px;
+}
+
+// ######## modal #######
+.blur.active {
+  filter: blur(8px);
+}
+
+.modal-backdrop.show {
+  background-color: white;
+  opacity: 0.6;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+  color: white;
+
+  .form-container__inner {
+    background: rgb(141, 0, 38);
+    background: linear-gradient(
+      90deg,
+      rgba(141, 0, 38, 1) 22%,
+      rgba(97, 2, 39, 1) 100%
+    );
+    padding: 50px 100px;
+    border-radius: 10px;
+    max-width: max-content;
+    margin: auto;
+  }
+
+  .close {
+    opacity: 1;
+    margin-bottom: 50px;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .header__title {
+    @include font-size(20px);
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  input[type="text"] {
+    border: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    font-size: 14px;
+    margin-top: 30px;
+    max-width: 255px;
+    background-color: transparent;
+    width: 100%;
+    color: white;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-input-placeholder {
+      /* Edge */
+      color: white;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: white;
+    }
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  .button {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color: $primary_light;
+    margin-top: 40px;
+
+    &:hover {
+      background-color: $dark_red;
+      color: white;
+    }
+  }
+
+  .form-footer {
+    max-width: 250px;
+    color: $primary_light;
+    margin: 50px auto 0;
+  }
+
+  p {
+    margin-bottom: 0;
+    line-height: 1;
+    font-size: 13px;
+  }
+
+  b {
+    line-height: 1;
+    color: $primary_dark;
+    font-size: 16px;
+  }
+
+  @include maxQ(575px) {
+    .form-container__inner {
+      padding: 30px 40px;
+    }
+  }
 }

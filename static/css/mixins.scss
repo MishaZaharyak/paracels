@@ -45,10 +45,17 @@
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
+  max-width: max-content;
+  transition: all 0.3s ease;
 
   &:hover {
     color: white;
     background-color: $dark_red;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
   }
 }
 
@@ -61,5 +68,13 @@
   .container {
     display: flex;
     justify-content: center;
+  }
+}
+
+@mixin menu_active_class_style($color) {
+  .nav-item__link {
+    opacity: 1;
+    border-bottom: 1px solid $color;
+    color: $color;
   }
 }

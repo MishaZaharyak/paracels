@@ -68,7 +68,9 @@
                 </div>
                 <div class="top-bar__item top-bar__logo-cont">
                     <div class="">
-                        <img src="./static/images/logo.png" alt="парацельс" class="top-bar__logo-img">
+                        <a href="/" class="a-link">
+                            <img src="./static/images/logo.png" alt="парацельс" class="top-bar__logo-img">
+                        </a>
                     </div>
                 </div>
                 <div class="top-bar__item">
@@ -76,7 +78,8 @@
                     <a class="a-link" href="tel:+380730101401">+38 073 01 01 401</a>
                 </div>
                 <div class="top-bar__item top-bar__button-cont">
-                    <button class="btn order-btn">Замовити дзвінок</button>
+                    <button class="btn order-btn" data-toggle="modal" 
+                    data-target="#orderModalForm">Замовити дзвінок</button>
                 </div>
             </div>
             <nav class="menu-navbar navbar navbar-expand-lg navbar-light bg-light">
@@ -95,22 +98,22 @@
                     <div class="collapse navbar-collapse" id="navbarMenu">
                         <ul class="navbar-nav m-auto text-center">
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="#">Головна</a>
+                                <a class="a-link nav-item__link" href="/">Головна</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="a-link nav-item__link" href="./uzd.html">УЗД</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="/uzd.html">УЗД</a>
+                                <a class="a-link nav-item__link" href="./psychiatrist.html">приватний психіатор</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="/psychiatrist.html">приватний психіатор</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="a-link nav-item__link" href="/#doctors">наші лікарі</a>
+                                <a class="a-link nav-item__link" href="#doctors">наші лікарі</a>
                             </li>
                             <li class="nav-item">
                                 <a class="a-link nav-item__link" href="/#medical-center">про нас</a>
                             </li>
                             <li class="nav-item">
-                                <a class="a-link nav-item__link" href="/#map">контакти</a>
+                                <a class="a-link nav-item__link" href="#map">контакти</a>
                             </li>
                         </ul>
                     </div>
@@ -128,7 +131,7 @@
                     <div class="inner__text-con">
                         <p class="p-text">Професійне обстеження</p>
                         <h1 class="main-slider__h1">Проводимо узд</h1>
-                        <div><img class="mx-auto mt-5" src="./static/images/icons/mscroll.png" alt="scroll down"></div>
+                        <div><img class="mx-auto mt-5 scrollDown" src="./static/images/icons/mscroll.png" alt="scroll down"></div>
                     </div>
                 </div>
             </div>
@@ -137,14 +140,14 @@
                     <div class="inner__text-con">
                         <p class="p-text">Професійне обстеження</p>
                         <h1 class="main-slider__h1">Проводимо узд</h1>
-                        <div><img class="mx-auto mt-5" src="./static/images/icons/mscroll.png" alt="scroll down"></div>
+                        <div><img class="mx-auto mt-5 scrollDown" src="./static/images/icons/mscroll.png" alt="scroll down"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="double-text-section container d-flex left">
-        <div class="section">
+        <div class="section wow fadeInLeft">
             <h4 class="h4">Ультразвукова діагностика всього організму на сучасному апараті</h4>
             <p>— Висока точність і деталізація. 3D і 4D візуалізація.</p>
 
@@ -153,9 +156,10 @@
                 операції, точно локалізувати область втручання, контролювати хід процедури і її результативність.</p>
             <p>Всі рекомендації важливі і мають своє медичне обґрунтування. Дотримання правил підготовки допомагає
                 лікареві в найбільш точній і детальному огляді.</p>
-            <button class="button">Замовити дзвінок</button>
+            <button data-toggle="modal" data-target="#orderModalForm" 
+                class="button">Замовити дзвінок</button>
         </div>
-        <div class="section">
+        <div class="section wow fadeInRight">
             <h5 class="h5">Цей апарат застосовується для ультразвукової діагностики:</h5>
             <ul class="list-unstyled">
                 <li class="checked">Судин та серця</li>
@@ -180,11 +184,11 @@
                 <li class="checked">Органів малого тазу</li>
                 <li class="checked">Суглобів</li>
             </ul>
-            <button class="button mt-3">детальніше та ціни</button>
+            <a href="#price-table" class="a-link button mt-3">детальніше та ціни</a>
         </div>
     </div>
     <div class="double-text-section container d-flex">
-        <div class="section">
+        <div class="section wow fadeInLeft">
             <h5 class="h5">Цей апарат застосовується для ультразвукової діагностики:</h5>
             <ul class="list-unstyled">
                 <li class="checked">Судин та серця</li>
@@ -194,7 +198,7 @@
                 <li class="checked">Суглобів</li>
             </ul>
         </div>
-        <div class="section">
+        <div class="section wow fadeInRight">
             <h4 class="h4">Ультразвукова діагностика всього організму на сучасному апараті</h4>
             <p>— Висока точність і деталізація. 3D і 4D візуалізація.</p>
 
@@ -203,13 +207,14 @@
                 операції, точно локалізувати область втручання, контролювати хід процедури і її результативність.</p>
             <p>Всі рекомендації важливі і мають своє медичне обґрунтування. Дотримання правил підготовки допомагає
                 лікареві в найбільш точній і детальному огляді.</p>
-            <button class="button">Замовити дзвінок</button>
+            <button class="button" data-toggle="modal" 
+            data-target="#orderModalForm">Замовити дзвінок</button>
         </div>
     </div>
     <div class="image-layer-1">
         <div class="section-image-7">
             <div class="price-section container">
-                <h3 class="h3 text-center">вартість послуг</h3>
+                <h3 id="price-table" class="h3 text-center">вартість послуг</h3>
 
                 <div class="d-flex flex-column flex-lg-row">
                     <table class="table table-borderless">
@@ -274,7 +279,7 @@
                     </table>
                 </div>
             </div>
-            <div class="doctors-slider-section d-flex align-items-center container px-xl-0">
+            <div class="doctors-slider-section d-flex align-items-center container px-xl-0" id="doctors">
                 <!-- form -->
                 <div class="form-cont">
                     <h3 class="h3">Лікарі УЗД</h3>
@@ -385,13 +390,14 @@
     <div class="separator-section section-image-5-2">
         <div class="container">
             <div class="content">
-                <div class="price-old">500 грн</div>
-                <div class="price-new">250 грн</div>
+                <div class="price-old wow lightSpeedIn">500 грн</div>
+                <div class="price-new wow lightSpeedIn">250 грн</div>
                 <div class="title">Первинний прийом</div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus maiores provident
                     quaerat rerum totam ut veniam voluptates. Ex exercitationem facilis natus repellendus, tempore
                     unde.</p>
-                <button>Записатися</button>
+                <button data-toggle="modal" 
+                data-target="#orderModalForm">Записатися</button>
             </div>
         </div>
     </div>
@@ -474,23 +480,23 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <ul class="navbar-nav m-auto text-center">
+                    <li class="nav-item">
+                        <a class="a-link nav-item__link" href="#main-slider">Головна</a>
+                    </li>
                     <li class="nav-item active">
-                        <a class="a-link nav-item__link" href="#">Головна</a>
+                        <a class="a-link nav-item__link" href="./uzd.html">УЗД</a>
                     </li>
                     <li class="nav-item">
-                        <a class="a-link nav-item__link" href="#">УЗД</a>
+                        <a class="a-link nav-item__link" href="./psychiatrist.html">приватний психіатор</a>
                     </li>
                     <li class="nav-item">
-                        <a class="a-link nav-item__link" href="#">приватний психіатор</a>
+                        <a class="a-link nav-item__link" href="#doctors">наші лікарі</a>
                     </li>
                     <li class="nav-item">
-                        <a class="a-link nav-item__link" href="#">наші лікарі</a>
+                        <a class="a-link nav-item__link" href="/#medical-center">про нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="a-link nav-item__link" href="#">про нас</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="a-link nav-item__link" href="#">контакти</a>
+                        <a class="a-link nav-item__link" href="#map">контакти</a>
                     </li>
                 </ul>
             </nav>
@@ -522,7 +528,9 @@
                 </div>
                 <div class="top-bar__item parent_logo_cont">
                     <div class="top-bar__logo-cont">
-                        <img src="./static/images/logo_footer.png" alt="парацельс" class="top-bar__logo-img">
+                        <a href="/" class="a-link">
+                            <img src="./static/images/logo_footer.png" alt="парацельс" class="top-bar__logo-img">
+                        </a>
                     </div>
                 </div>
                 <div class="top-bar__item">
@@ -530,11 +538,14 @@
                     <a class="a-link" href="tel:+380730101401">+38 073 01 01 401</a>
                 </div>
                 <div class="top-bar__item">
-                    <button class="btn order-btn">Замовити дзвінок</button>
+                    <button class="btn order-btn" data-toggle="modal" 
+                    data-target="#orderModalForm">Замовити дзвінок</button>
                 </div>
             </div>
             <div class="footer-logo">
-                <img src="./static/images/logo_footer.png" alt="парацельс">
+                <a href="/" class="a-link">
+                    <img src="./static/images/logo_footer.png" alt="парацельс">
+                </a>
             </div>
         </div>
         <div class="copyright d-flex align-items-center">
@@ -544,6 +555,37 @@
             </div>
         </div>
     </footer>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="orderModalForm" tabindex="-1" role="dialog" 
+aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+   <div class="modal-content">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <img src="./static/images/icons/times.png" alt="">
+       </button>
+       <div class="form-container">
+            <div class="form-container__inner">
+                <div class="form__header">
+                    <h4 class="header__title">Замовити дзвінок</h4>
+                </div>
+                <form action="mail.php" class="d-flex flex-column align-items-start" method="POST">
+                    <input type="text" name="name" placeholder="Ваше ім’я" required>
+                    <input type="text" name="phone" placeholder="Ваш номер телефону" required>
+                    <div class="alert alert-primary w-100 mt-2 d-none"></div>
+                    <input class="button" type="submit" value="Замовити дзвінок">
+                </form>
+            </div>
+            <div class="form-footer d-flex align-items-start">
+                <img class="mr-2 mt-2" src="./static/images/icons/safe.png" alt="">
+                <div>
+                    <p><b>Ваша конфіденційність дуже важлива для нас.</b></p>
+                    <p>Ваша інформація не буде передана або продана третім сторонам.</p>
+                </div>
+            </div>
+        </div>
+   </div>
+   </div>
 </div>
 
 
