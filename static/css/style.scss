@@ -1407,7 +1407,7 @@ li.checked {
     padding-bottom: 5px;
     font-size: 14px;
     margin-top: 30px;
-    max-width: 255px;
+    min-width: 255px;
     background-color: transparent;
     width: 100%;
     color: white;
@@ -1465,6 +1465,10 @@ li.checked {
   @include maxQ(575px) {
     .form-container__inner {
       padding: 30px 40px;
+    }
+
+    input[type="text"] {
+      min-width: unset;
     }
   }
 }
