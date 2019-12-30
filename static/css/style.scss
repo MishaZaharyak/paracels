@@ -3,7 +3,7 @@
 @import "./mixins.scss";
 
 body {
-  //font-family: $font_family;
+  font-family: $font_family;
   font-weight: normal;
 
   &::-webkit-scrollbar {
@@ -81,7 +81,7 @@ body {
   text-transform: uppercase;
   color: $primary_light;
   line-height: 1;
-  font-weight: 900;
+  font-family: $font_family_medium;
 }
 
 .h3 {
@@ -351,7 +351,7 @@ li.checked {
   padding-right: 0;
   padding-left: 0;
   color: $primary_light;
-  font-weight: bold;
+  font-family: $font_family_medium;
   transition: all 0.3s ease;
 }
 
@@ -509,7 +509,7 @@ li.checked {
   }
 
   .slick-active .dot {
-    font-weight: bold;
+    font-family: $font_family_medium;
     opacity: 1;
 
     .number {
@@ -545,7 +545,7 @@ li.checked {
 }
 
 .main-slider__h1 {
-  font-weight: 900;
+  font-family: $font_family_medium;
   margin-bottom: 0;
   @include font-size(60px);
   text-transform: uppercase;
@@ -942,7 +942,7 @@ li.checked {
     line-height: 1;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: bold;
+    font-family: $font_family_medium;
     max-width: max-content;
     margin-bottom: 5px;
   }
@@ -951,7 +951,7 @@ li.checked {
     font-size: 20px;
     line-height: 1;
     text-transform: uppercase;
-    font-weight: bold;
+    font-family: $font_family_medium;
     margin-bottom: 25px;
   }
 
@@ -1050,7 +1050,7 @@ li.checked {
   .comment-title,
   .name {
     color: $primary_light;
-    font-weight: bold;
+    font-family: $font_family_medium;
   }
 
   @include maxQ(991px) {
@@ -1160,7 +1160,7 @@ li.checked {
 
   .gm-style-iw-d {
     color: $primary_dark;
-    font-weight: bold;
+    font-family: $font_family_medium;
   }
 
   @include maxQ(1199px) {
@@ -1191,6 +1191,10 @@ li.checked {
     max-width: 250px;
     width: 100%;
     margin: 0 auto 25px;
+
+    img {
+      max-width: 250px;
+    }
   }
 
   @include maxQ(1199px) {
@@ -1308,7 +1312,7 @@ li.checked {
 
   th,
   .price {
-    font-weight: bold;
+    font-family: $font_family_medium;
   }
 
   th,
@@ -1446,7 +1450,7 @@ li.checked {
   .header__title {
     @include font-size(20px);
     text-transform: uppercase;
-    font-weight: 900;
+    font-family: $font_family_medium;
     margin-bottom: 20px;
     text-align: center;
   }
