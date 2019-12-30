@@ -11,11 +11,31 @@ body::-webkit-scrollbar-thumb {
   background-color: #8d0026;
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
 .scrollDown {
-  -webkit-animation-name: fadeOutDown;
-  animation-name: fadeOutDown;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
@@ -246,7 +266,18 @@ li.checked::before {
 .menu-navbar .menu-backdrop {
   display: none;
 }
+.menu-navbar .logo-dark,
+.menu-navbar .logo-white {
+  display: none;
+  max-width: 200px;
+}
+.menu-navbar .navbar-brand {
+  margin: 0;
+}
 @media (max-width: 991px) {
+  .menu-navbar:not(.opened-menu) .logo-dark {
+    display: block;
+  }
   .menu-navbar.opened-menu {
     height: 100vh;
     position: fixed;
@@ -276,12 +307,21 @@ li.checked::before {
     width: 100%;
     background: transparent;
   }
+  .menu-navbar.opened-menu #nav-icon3 {
+    margin: 0 auto 50px;
+  }
   .menu-navbar .navbar-nav {
     height: 0;
   }
+  .menu-navbar.fixed-menu:not(.opened-menu) .logo-dark {
+    display: none;
+  }
+  .menu-navbar.fixed-menu:not(.opened-menu) .logo-white {
+    display: block;
+  }
 }
 .menu-navbar.opened-menu, .menu-navbar.fixed-menu {
-  background-color: rgba(141, 0, 38, 0.5) !important;
+  background-color: rgba(141, 0, 38, 0.9) !important;
 }
 .menu-navbar.opened-menu .nav-item.active .nav-item__link,
 .menu-navbar.opened-menu .nav-item:hover .nav-item__link, .menu-navbar.fixed-menu .nav-item.active .nav-item__link,
@@ -298,7 +338,7 @@ li.checked::before {
 }
 .menu-navbar.fixed-menu {
   margin: 0;
-  padding: 15px;
+  padding: 7px;
   position: fixed;
   top: 0;
 }
