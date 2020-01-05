@@ -1022,7 +1022,7 @@ li.checked::before {
   box-shadow: none;
 }
 .separator-section button:hover {
-  background: #8d0026;
+  background: #db1d33;
 }
 @media (max-width: 1400px) {
   .separator-section {
