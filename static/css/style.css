@@ -183,7 +183,7 @@ li.checked {
   padding-left: 30px;
   position: relative;
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: 15px;
 }
 li.checked::before {
   position: absolute;
@@ -222,7 +222,7 @@ li.checked::before {
 .header {
   position: absolute;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
 }
 
 .top-bar {
@@ -465,7 +465,7 @@ li.checked::before {
 }
 .main-slider-section .item {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover, 0;
   background-position: center;
 }
 .main-slider-section .centered {
@@ -512,6 +512,9 @@ li.checked::before {
   }
 }
 @media (max-width: 767px) {
+  .main-slider-section .item {
+    background-size: 0, cover;
+  }
   .main-slider-section .inner__text-con {
     text-align: center;
   }
@@ -671,7 +674,7 @@ li.checked::before {
 }
 .text-image-section p,
 .text-image-section li {
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (max-width: 1199px) {
   .text-image-section {
@@ -742,7 +745,7 @@ li.checked::before {
 }
 .form-cont p {
   max-width: 278px;
-  font-size: 14px;
+  font-size: 15px;
 }
 .form-cont input[type=text] {
   border: none;
@@ -882,7 +885,7 @@ li.checked::before {
 .doctors-slider .position,
 .doctors-slider .experience {
   color: #610227;
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (max-width: 991px) {
   .doctors-slider {
@@ -953,7 +956,7 @@ li.checked::before {
   }
 }
 .separator-section p {
-  font-size: 14px;
+  font-size: 15px;
 }
 .separator-section .content {
   color: white;
@@ -1092,7 +1095,7 @@ li.checked::before {
 }
 .review-slider .item__inner {
   max-width: 290px;
-  font-size: 14px;
+  font-size: 15px;
   margin: auto;
 }
 .review-slider .comment-title,
@@ -1124,7 +1127,7 @@ li.checked::before {
   z-index: 100;
 }
 .medical-center-section .section-header p {
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (max-width: 1199px) {
   .medical-center-section {
@@ -1271,7 +1274,7 @@ li.checked::before {
 .text-section p {
   color: #8d0026;
   margin-bottom: 30px;
-  font-size: 14px;
+  font-size: 15px;
   max-width: 755px;
 }
 @media (max-width: 991px) {
@@ -1355,7 +1358,7 @@ li.checked::before {
 .double-text-section p {
   max-width: 530px;
   color: #8d0026;
-  font-size: 14px;
+  font-size: 15px;
 }
 @media (max-width: 1199px) {
   .double-text-section .section:first-child {
@@ -1396,7 +1399,7 @@ li.checked::before {
 }
 
 .alert {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .blur.active {
@@ -1445,7 +1448,7 @@ li.checked::before {
   border: none;
   border-bottom: 1px solid white;
   padding-bottom: 5px;
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 30px;
   min-width: 255px;
   background-color: transparent;

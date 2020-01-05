@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="./static/vendor/slick/slick.css">
     <link rel="stylesheet" href="./static/vendor/animate-css/animate.css"/>
+    <link rel="stylesheet" href="./static/css/magnific-popup.min.css"/>
     <link rel="stylesheet" href="./static/css/style.css?v=1.3"/>
 
     <link rel="apple-touch-icon" sizes="57x57" href="static/images/favicon/apple-icon-57x57.png">
@@ -27,7 +28,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="static/images/favicon/apple-icon-144x144.png">
     <link rel="apple-touch-icon" sizes="152x152" href="static/images/favicon/apple-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="static/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/images/favicon/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
@@ -78,8 +79,9 @@
                     <a class="a-link" href="tel:+380730101401">+38 073 01 01 401</a>
                 </div>
                 <div class="top-bar__item top-bar__button-cont">
-                    <button class="btn order-btn" data-toggle="modal" 
-                    data-target="#orderModalForm">Замовити дзвінок</button>
+                    <button class="btn order-btn" data-toggle="modal"
+                            data-target="#orderModalForm">Замовити дзвінок
+                    </button>
                 </div>
             </div>
             <nav class="menu-navbar navbar navbar-expand-lg navbar-light bg-light">
@@ -130,7 +132,8 @@
             <div class="position-relative container"></div>
         </div>
         <div class="main-slider">
-            <div class="item" style="background-image: url('./static/images/slider-image.png')">
+            <div class="item"
+                 style="background-image: url('./static/images/slider-image.jpg'), url('./static/images/slider-image-sm.jpg')">
                 <div class="item__inner container">
                     <div class="inner__text-con">
                         <p class="p-text">Обстежуйся у нас та отримуй</p>
@@ -140,7 +143,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url('./static/images/slider_image_2.png')">
+            <div class="item"
+                 style="background-image: url('./static/images/slider_image_2.png'), url('./static/images/slider-image-sm.jpg')">
                 <div class="item__inner container">
                     <div class="inner__text-con">
                         <p class="p-text">Обстежуйся у нас та отримуй</p>
@@ -150,7 +154,8 @@
                     </div>
                 </div>
             </div>
-            <div class="item" style="background-image: url('./static/images/slider-image.png')">
+            <div class="item"
+                 style="background-image: url('./static/images/slider-image.jpg'), url('./static/images/slider-image-sm.jpg')">
                 <div class="item__inner container">
                     <div class="inner__text-con">
                         <p class="p-text">Обстежуйся у нас та отримуй</p>
@@ -300,9 +305,18 @@
             <p class="mb-3 mt-4 ml-1 text-center text-lg-left">Сертифікати:</p>
 
             <div class="d-flex certificates">
-                <img class="wow fadeInRight" src="./static/images/certificate_1.png" alt="certificate 1">
-                <img class="wow fadeInRight" data-wow-delay=".3s" src="./static/images/certificate_2.png" alt="certificate 2">
-                <img class="wow fadeInRight" data-wow-delay=".6s" src="./static/images/certificate_3.png" alt="certificate 3">
+                <a class="a-link" href="./static/images/certificate_1.jpg">
+                    <img class="wow fadeInRight certificates-image" src="./static/images/certificate_1.jpg"
+                         alt="certificate 1">
+                </a>
+                <a class="a-link" href="./static/images/certificate_2.jpg">
+                    <img class="wow fadeInRight certificates-image" data-wow-delay=".3s"
+                         src="./static/images/certificate_2.jpg" alt="certificate 2">
+                </a>
+                <a class="a-link" href="./static/images/certificate_3.png">
+                    <img class="wow fadeInRight certificates-image" data-wow-delay=".6s"
+                         src="./static/images/certificate_3.png" alt="certificate 3">
+                </a>
             </div>
         </div>
     </div>
@@ -315,8 +329,9 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio ducimus maiores provident
                     quaerat rerum totam ut veniam voluptates. Ex exercitationem facilis natus repellendus, tempore
                     unde.</p>
-                <button data-toggle="modal" 
-                data-target="#orderModalForm">Записатися</button>
+                <button data-toggle="modal"
+                        data-target="#orderModalForm">Записатися
+                </button>
             </div>
         </div>
     </div>
@@ -497,8 +512,9 @@
                     <a class="a-link" href="tel:+380730101401">+38 073 01 01 401</a>
                 </div>
                 <div class="top-bar__item">
-                    <button class="btn order-btn" data-toggle="modal" 
-                    data-target="#orderModalForm">Замовити дзвінок</button>
+                    <button class="btn order-btn" data-toggle="modal"
+                            data-target="#orderModalForm">Замовити дзвінок
+                    </button>
                 </div>
             </div>
             <div class="footer-logo">
@@ -517,35 +533,35 @@
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="orderModalForm" tabindex="-1" role="dialog" 
-aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-   <div class="modal-content">
-       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <img src="./static/images/icons/times.png" alt="">
-       </button>
-       <div class="form-container">
-            <div class="form-container__inner">
-                <div class="form__header">
-                    <h4 class="header__title">Замовити дзвінок</h4>
+<div class="modal fade" id="orderModalForm" tabindex="-1" role="dialog"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <img src="./static/images/icons/times.png" alt="">
+            </button>
+            <div class="form-container">
+                <div class="form-container__inner">
+                    <div class="form__header">
+                        <h4 class="header__title">Замовити дзвінок</h4>
+                    </div>
+                    <form action="mail.php" class="d-flex flex-column align-items-start" method="POST">
+                        <input type="text" name="name" placeholder="Ваше ім’я" required>
+                        <input type="text" name="phone" placeholder="Ваш номер телефону" required>
+                        <div class="alert alert-primary w-100 mt-2 d-none"></div>
+                        <input class="button" type="submit" value="Замовити дзвінок">
+                    </form>
                 </div>
-                <form action="mail.php" class="d-flex flex-column align-items-start" method="POST">
-                    <input type="text" name="name" placeholder="Ваше ім’я" required>
-                    <input type="text" name="phone" placeholder="Ваш номер телефону" required>
-                    <div class="alert alert-primary w-100 mt-2 d-none"></div>
-                    <input class="button" type="submit" value="Замовити дзвінок">
-                </form>
-            </div>
-            <div class="form-footer d-flex align-items-start">
-                <img class="mr-2 mt-2" src="./static/images/icons/safe.png" alt="">
-                <div>
-                    <p><b>Ваша конфіденційність дуже важлива для нас.</b></p>
-                    <p>Ваша інформація не буде передана або продана третім сторонам.</p>
+                <div class="form-footer d-flex align-items-start">
+                    <img class="mr-2 mt-2" src="./static/images/icons/safe.png" alt="">
+                    <div>
+                        <p><b>Ваша конфіденційність дуже важлива для нас.</b></p>
+                        <p>Ваша інформація не буде передана або продана третім сторонам.</p>
+                    </div>
                 </div>
             </div>
         </div>
-   </div>
-   </div>
+    </div>
 </div>
 
 <div id="callme" data-toggle="modal" data-target="#orderModalForm">
@@ -556,6 +572,7 @@ aria-hidden="true">
 <script src="./static/vendor/jquery/popper.min.js"></script>
 <script src="./static/vendor/slick/slick.min.js"></script>
 <script src="./static/vendor/bootstrap4.1.3/bootstrap.min.js"></script>
+<script src="./static/js/magnific-popup.min.js"></script>
 <script src="./static/vendor/animate-css/wow.min.js"></script>
 <script src="https://maps.google.com/maps/api/js?key=AIzaSyB4FatB7NG6A-oGvDO0ZEbT8fLzsDCFjCM"></script>
 <script src="./static/vendor/gmapjs/gmaps.min.js"></script>

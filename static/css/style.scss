@@ -104,7 +104,7 @@ li.checked {
   padding-left: 30px;
   position: relative;
   margin-bottom: 12px;
-  font-size: 14px;
+  font-size: $main_font_size;
 
   &::before {
     position: absolute;
@@ -152,7 +152,7 @@ li.checked {
 .header {
   position: absolute;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
 }
 
 .top-bar {
@@ -346,7 +346,6 @@ li.checked {
 
 .nav-item__link {
   text-transform: uppercase;
-  //border-bottom: 1px solid $primary_light;
   opacity: 0.7;
   padding-right: 0;
   padding-left: 0;
@@ -430,7 +429,7 @@ li.checked {
 
   .item {
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover, 0;
     background-position: center;
   }
 
@@ -470,6 +469,10 @@ li.checked {
   }
 
   @include maxQ(767px) {
+    .item {
+      background-size: 0, cover;
+    }
+
     .inner__text-con {
       text-align: center;
     }
@@ -614,7 +617,7 @@ li.checked {
 
   p,
   li {
-    font-size: 14px;
+    font-size: $main_font_size;
   }
 
   @include maxQ(1199px) {
@@ -690,7 +693,7 @@ li.checked {
 
   p {
     max-width: 278px;
-    font-size: 14px;
+    font-size: $main_font_size;
   }
 
   input[type="text"] {
@@ -836,7 +839,7 @@ li.checked {
   .position,
   .experience {
     color: $primary_dark;
-    font-size: 14px;
+    font-size: $main_font_size;
   }
 
   @include maxQ(991px) {
@@ -914,7 +917,7 @@ li.checked {
   }
 
   p {
-    font-size: 14px;
+    font-size: $main_font_size;
   }
 
   .content {
@@ -1043,7 +1046,7 @@ li.checked {
 
   .item__inner {
     max-width: 290px;
-    font-size: 14px;
+    font-size: $main_font_size;
     margin: auto;
   }
 
@@ -1080,7 +1083,7 @@ li.checked {
     z-index: 100;
 
     p {
-      font-size: 14px;
+      font-size: $main_font_size;
     }
   }
 
@@ -1264,7 +1267,7 @@ li.checked {
   p {
     color: $primary_light;
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: $main_font_size;
     max-width: 755px;
   }
 
@@ -1356,7 +1359,7 @@ li.checked {
   p {
     max-width: 530px;
     color: $primary_light;
-    font-size: 14px;
+    font-size: $main_font_size;
   }
 
   @include maxQ(1199px) {
@@ -1406,7 +1409,7 @@ li.checked {
 // ################# end psychiatrist page #################
 
 .alert {
-  font-size: 14px;
+  font-size: $main_font_size;
 }
 
 // ######## modal #######
@@ -1460,7 +1463,7 @@ li.checked {
     border: none;
     border-bottom: 1px solid white;
     padding-bottom: 5px;
-    font-size: 14px;
+    font-size: $main_font_size;
     margin-top: 30px;
     min-width: 255px;
     background-color: transparent;
