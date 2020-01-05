@@ -121,7 +121,6 @@ li.checked {
 .arrows {
   button {
     background-color: transparent;
-    border: none;
     outline: none;
     cursor: pointer;
     border-radius: 50%;
@@ -135,7 +134,7 @@ li.checked {
   }
 
   img {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 
   .slick_prev {
@@ -516,7 +515,6 @@ li.checked {
     opacity: 1;
 
     .number {
-      //font-size: 17px;
       transform: scale(1.3);
     }
   }
@@ -874,10 +872,6 @@ li.checked {
   max-width: 468px;
   margin-left: 8px;
   margin-bottom: 25px;
-
-  .item {
-    //transition-delay: .3s;
-  }
 
   .item__inner {
     min-width: 220px;
