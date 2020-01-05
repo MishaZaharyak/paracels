@@ -465,7 +465,7 @@ li.checked::before {
 }
 .main-slider-section .item {
   background-repeat: no-repeat;
-  background-size: cover, 0;
+  background-size: cover;
   background-position: center;
 }
 .main-slider-section .centered {
@@ -512,8 +512,8 @@ li.checked::before {
   }
 }
 @media (max-width: 767px) {
-  .main-slider-section .item {
-    background-size: 0, cover;
+  .main-slider-section .slide-1 {
+    background-image: url("../images/slider-image-sm.jpg") !important;
   }
   .main-slider-section .inner__text-con {
     text-align: center;

@@ -429,7 +429,7 @@ li.checked {
 
   .item {
     background-repeat: no-repeat;
-    background-size: cover, 0;
+    background-size: cover;
     background-position: center;
   }
 
@@ -469,8 +469,8 @@ li.checked {
   }
 
   @include maxQ(767px) {
-    .item {
-      background-size: 0, cover;
+    .slide-1 {
+      background-image: url('../images/slider-image-sm.jpg') !important;
     }
 
     .inner__text-con {
