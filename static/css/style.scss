@@ -968,7 +968,11 @@ li.checked {
     );
 
     &:hover {
-      background: rgb(219, 29, 51);
+      background: linear-gradient(
+                      157deg,
+                      rgba(219, 29, 51, 1) 0%,
+                      rgba(219, 29, 51, 1) 100%
+      );
     }
   }
 
@@ -1546,6 +1550,7 @@ li.checked {
     bottom: 25px;
   }
 }
+
 #callme #callmeMain {
   -moz-border-radius: 50% !important;
   -webkit-border-radius: 50% !important;
@@ -1565,6 +1570,7 @@ li.checked {
   -moz-animation: pulse 1.5s 0s ease-out infinite;
   animation: pulse 1.5s 0s ease-out infinite;
 }
+
 #callme #callmeMain:before {
   content: "";
   position: absolute;
@@ -1587,8 +1593,9 @@ li.checked {
     box-shadow: 0 0 0 10px rgba(219, 29, 51, 0.25);
   }
   100% {
-    -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
-    box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
   }
 }
+
 // end callback btn
